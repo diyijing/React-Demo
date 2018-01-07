@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>轮播样式</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="main.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        .CarouselContainer {
+            margin: 10px auto;
+            width: 600px;
+            height: 300px;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+
+        .CarouselContainer .arrow {
+            margin-right: -2em;
+            z-index: 2;
+        }
+
+        .CarouselContainer .arrow:nth-last-of-type(1) {
+            margin-left: -2em;
+            transform: rotateY(180deg)
+        }
+
+        .sliders {
+            overflow: hidden;
+            position: relative;
+            font-size: 0;
+            height: 100%;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        .sliders li {
+            height: 100%;
+            display: inline-block;
+            width: 600px;
+        }
+
+        .sliders img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+        .sliders img {
+            display: block;
+        }
+
+        .achors {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            max-width: 30%;
+            left: 50%;
+            bottom: 40px;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .achors li {
+            margin: 0px 5px;
+            background-color: dimgray;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="CarouselContainer">
+            <div class="arrow">
+                <i class="icon-circle-left"></i>
+            </div>
+            <ul class="sliders">
+                <li>
+                    <a href="https://www.google.com">
+                        <img src="https://img10.360buyimg.com/da/jfs/t13792/76/2553225335/85708/1fdcb73c/5a434610N72ec02cb.jpg" alt="谷歌">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.bing.com">
+                        <img src="https://img11.360buyimg.com/da/jfs/t5464/106/472798610/142359/66551a05/58ffffc8Naea1f2a2.jpg" alt="bing">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.baidu.com">
+                        <img src="https://img14.360buyimg.com/da/jfs/t12136/20/2273406938/197444/b45a2120/5a38e383Nfff777c0.jpg" alt="baidu">
+                    </a>
+                </li>
+            </ul>
+            <div class="arrow">
+                <i class="icon-circle-left"></i>
+            </div>
+        </div>
+        <ul class="achors">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>
